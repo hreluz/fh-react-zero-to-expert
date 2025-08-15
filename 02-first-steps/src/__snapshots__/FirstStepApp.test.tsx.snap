@@ -5,81 +5,17 @@ exports[`FirstStepApp > should match snapshot 1`] = `
   <h1>
     Shopping Cart
   </h1>
-  <section
-    class="item-row"
-  >
-    <span
-      class="item-text"
-      style="color: black;"
-    >
-      Nintendo Switch 2
-    </span>
-    <button>
-      +1
-    </button>
-    <span>
-      5
-    </span>
-    <button>
-      -1
-    </button>
-  </section>
-  <section
-    class="item-row"
-  >
-    <span
-      class="item-text"
-      style="color: black;"
-    >
-      Play Station 4
-    </span>
-    <button>
-      +1
-    </button>
-    <span>
-      6
-    </span>
-    <button>
-      -1
-    </button>
-  </section>
-  <section
-    class="item-row"
-  >
-    <span
-      class="item-text"
-      style="color: black;"
-    >
-      Play Station 5
-    </span>
-    <button>
-      +1
-    </button>
-    <span>
-      3
-    </span>
-    <button>
-      -1
-    </button>
-  </section>
-  <section
-    class="item-row"
-  >
-    <span
-      class="item-text"
-      style="color: black;"
-    >
-      Play Station 3
-    </span>
-    <button>
-      +1
-    </button>
-    <span>
-      5
-    </span>
-    <button>
-      -1
-    </button>
-  </section>
+  <div
+    data-testid="ItemCounter"
+  />
+  <div
+    data-testid="ItemCounter"
+  />
+  <div
+    data-testid="ItemCounter"
+  />
+  <div
+    data-testid="ItemCounter"
+  />
 </div>
 `;
