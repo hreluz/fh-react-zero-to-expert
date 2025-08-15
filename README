@@ -1,3 +1,23 @@
 Create project
 ------------------
 	npm create vite
+
+
+Testing
+-----------------
+	 npm install -D vitest	
+
+
+	On package.json
+	-----------------
+		
+	    "test": "vitest --ui",
+	    "coverage": "vitest run --coverage"
+
+
+
+
+
+Vitest docs
+----------------
+	https://vitest.dev/
