@@ -5,19 +5,47 @@ Create project
 
 Testing
 -----------------
-	 npm install -D vitest	
+	Vitest conf
+	----------------
+		 npm install -D vitest	
 
 
-	On package.json
-	-----------------
+		On package.json
+		-----------------
 		
-	    "test": "vitest --ui",
-	    "coverage": "vitest run --coverage"
+		    "test": "vitest --ui",
+		    "coverage": "vitest run --coverage"
+
+
+		On vite.config.ts
+		-----------------
+
+			import { defineConfig } from 'vitest/config'
+			import react from '@vitejs/plugin-react-swc'
+
+			// https://vite.dev/config/
+			export default defineConfig({
+			  plugins: [react()],
+			  test: {
+			    environment: 'jsdom',
+			    globals: true
+  			  }
+			})
 
 
 
+	Testing Library
+	-------------------
+
+		npm install --save-dev @testing-library/react @testing-library/dom
 
 
 Vitest docs
 ----------------
 	https://vitest.dev/
+
+
+Testing Library
+-----------------
+	https://testing-library.com/
+
