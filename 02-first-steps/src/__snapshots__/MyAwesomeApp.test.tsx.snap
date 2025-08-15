@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > should match snapshot 1`] = `
+<div>
+  <div
+    data-testid="div-app"
+  >
+    <h1
+      data-testid="first-name-title"
+    >
+      Bruce
+    </h1>
+    <h3>
+      Wayne
+    </h3>
+    <p>
+      Batman Arkham Asylum, Batman Arkham City, Batman Arkham Knight
+    </p>
+    <p
+      style="background-color: red; border-radius: 10px; padding: 10px;"
+    >
+      {"city":"Miami","state":"California","zipCode":10788}
+    </p>
+  </div>
+</div>
+`;
+
+exports[`MyAwesomeApp > should match snapshot 2`] = `
+<div
+  data-testid="div-app"
+>
+  <h1
+    data-testid="first-name-title"
+  >
+    Bruce
+  </h1>
+  <h3>
+    Wayne
+  </h3>
+  <p>
+    Batman Arkham Asylum, Batman Arkham City, Batman Arkham Knight
+  </p>
+  <p
+    style="background-color: red; border-radius: 10px; padding: 10px;"
+  >
+    {"city":"Miami","state":"California","zipCode":10788}
+  </p>
+</div>
+`;
