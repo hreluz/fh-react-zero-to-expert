@@ -50,4 +50,15 @@ describe('ItemCounter', () => {
 
         expect(screen.getByText('1')).toBeDefined();
     });
+
+    test('should change to red when count is greater than 1', () => {
+        const quantity = 1;
+        const name = 'Test Item';
+        render(<ItemCounter name={name} quantity={quantity}/>);
+
+
+        const itemText = screen.getByText(name);
+
+        expect(itemText.style.color).toBe('red');
+    });
 });
