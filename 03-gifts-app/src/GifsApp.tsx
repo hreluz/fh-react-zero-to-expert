@@ -1,10 +1,10 @@
 import { mockGifs } from "./mock-data/gifs.mock"
 import  './index.css';
 import { CustomHeader } from "./shared/components/CustomHeader";
-import { SearchBar } from "./shared/components/SearchBar";
 import { PreviousSearches } from "./shared/components/PreviousSearches";
 import { GifList } from "./gifs/components/GifList";
 import { useState } from "react";
+import { SearchBar } from "./shared/components/SearchBar";
 
 export const GifsApp = () => {
 
@@ -14,8 +14,14 @@ export const GifsApp = () => {
     console.log(term);
   }
 
-  const handleSearch = (query:string) => {
-    console.log(query)
+  const handleSearch = (query:string = '') => {
+    query = query.trim().toLowerCase();
+
+    if (query.length == 0) return;
+
+    if (previousTerms.includes(query)) return;
+    
+    setPreviousTerms([query, ...previousTerms].splice(0,8));
   }
 
   return (
