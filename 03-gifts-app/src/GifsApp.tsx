@@ -1,31 +1,17 @@
 import { mockGifs } from "./mock-data/gifs.mock"
 import  './index.css';
+import { CustomHeader } from "./shared/components/CustomHeader";
+import { SearchBar } from "./shared/components/SearchBar";
+import { PreviousSearches } from "./shared/components/PreviousSearches";
 
 export const GifsApp = () => {
   return (
     <>
-      <div className="content-center">
-          <h1>Gifs Searcher</h1>
-          <p>Search the perfect gif</p>
-      </div>
+      <CustomHeader title="My Gifs" description="Search your fav gifs"/>
 
+      <SearchBar placeholder="Search anything"/>
 
-      <div className="search-container">
-          <input type="text" placeholder="Search gifs" />
-          <button>Search</button>
-      </div>
-
-
-      <div className="previous-searches">
-        <h2>Previous searches</h2>
-
-        <div className="previous-searches-list">
-          <li>Batman</li>
-          <li>Superman</li>
-          <li>The Flash</li>
-        </div>
-      </div>
-
+      <PreviousSearches/>
 
       <div className="gifs-container">
         {
@@ -39,12 +25,7 @@ export const GifsApp = () => {
             </div>
           ))
         }
-
       </div>
-
-
-      
-
     </>
   )
 }
