@@ -3,6 +3,7 @@ import  './index.css';
 import { CustomHeader } from "./shared/components/CustomHeader";
 import { SearchBar } from "./shared/components/SearchBar";
 import { PreviousSearches } from "./shared/components/PreviousSearches";
+import { GifList } from "./gifs/components/GifList";
 
 export const GifsApp = () => {
   return (
@@ -11,21 +12,9 @@ export const GifsApp = () => {
 
       <SearchBar placeholder="Search anything"/>
 
-      <PreviousSearches/>
+      <PreviousSearches searches={['Batman', 'Flash']}/>
 
-      <div className="gifs-container">
-        {
-          mockGifs.map((gif) => (
-            <div key={gif.id} className="gif-card">
-              <img src={gif.url} alt={gif.title} />
-              <h3>{gif.title}</h3>
-              <p>
-                {gif.width}x{gif.height} (1.5mb)
-              </p>
-            </div>
-          ))
-        }
-      </div>
+      <GifList gifs={mockGifs}/>
     </>
   )
 }
