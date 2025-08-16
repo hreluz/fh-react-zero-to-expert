@@ -12,7 +12,7 @@ export const useCounter = (initialValue = 10) => {
   }
 
   const handleReset = () => {
-    setCounter(5);
+    setCounter(initialValue);
   }
 
     return {
