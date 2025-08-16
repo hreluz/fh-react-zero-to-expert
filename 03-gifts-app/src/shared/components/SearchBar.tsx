@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 interface Props {
   placeholder?: string;
-  onQuery: (query:string) => {}
+  onQuery: (query:string) => void
 }
 
 export const SearchBar = ({placeholder = 'Search ...', onQuery}: Props) => {
@@ -26,7 +26,6 @@ export const SearchBar = ({placeholder = 'Search ...', onQuery}: Props) => {
   const handleKeyDown = (event:React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === 'Enter') {
         handleSearch()
-        setQuery('')
       }
     }
 
